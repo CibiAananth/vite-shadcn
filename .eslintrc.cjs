@@ -14,13 +14,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'stylelint',
   ],
-  plugins: [
-    '@typescript-eslint',
-    'react',
-    'import',
-    'css',
-    'prettier',
-  ],
+  plugins: ['@typescript-eslint', 'react', 'import', 'css', 'prettier'],
   parser: '@babel/eslint-parser',
   parserOptions: {
     requireConfigFile: false,
@@ -90,7 +84,16 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: ['.eslintrc.js', '**/*.json'],
+  ignorePatterns: [
+    '/*',
+    '!/src',
+    '!/test',
+    '!/node_modules',
+    '!/dist',
+    '!/coverage',
+    '!/public',
+    '!/app',
+  ],
   rules: {
     'n/no-missing-import': 'off', // to disable path alias errors
     'node/no-missing-import': 'off', // to disable path alias errors

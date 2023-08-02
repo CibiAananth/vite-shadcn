@@ -14,7 +14,14 @@ module.exports = {
     'plugin:prettier/recommended',
     'stylelint',
   ],
-  plugins: ['@typescript-eslint', 'react', 'import', 'css', 'prettier'],
+  plugins: [
+    '@typescript-eslint',
+    'react',
+    'import',
+    'css',
+    'unused-imports',
+    'prettier',
+  ],
   parser: '@babel/eslint-parser',
   parserOptions: {
     requireConfigFile: false,
@@ -103,6 +110,17 @@ module.exports = {
 
     'prettier/prettier': 'error',
 
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+      },
+    ],
+
     'import/no-unresolved': 'error',
     'import/extensions': [
       'error',
@@ -126,7 +144,7 @@ module.exports = {
     '@typescript-eslint/no-extra-semi': 'error',
 
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'off',
 
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': 'error',

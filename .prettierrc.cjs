@@ -14,7 +14,7 @@ module.exports = {
   importOrder: [
     '^.*\\.s?css$', // Match any import that ends with .css or .scss
     '',
-    '^(react/(.*)$)|^(react$)|^(react-$)',
+    '^(react/(.*)$)|^(react$)|^(react-(.*)$)',
     '<THIRD_PARTY_MODULES>',
     '',
     '^types$',

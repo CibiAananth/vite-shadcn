@@ -1,6 +1,8 @@
 module.exports = {
   extends: ['stylelint-config-standard', 'stylelint-config-tailwindcss'],
+  plugins: ['stylelint-prettier'],
   rules: {
+    'prettier/prettier': true,
     'selector-class-pattern': null,
     'block-no-empty': true,
     'no-duplicate-selectors': true,

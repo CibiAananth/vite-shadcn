@@ -12,9 +12,11 @@ module.exports = {
   htmlWhitespaceSensitivity: 'ignore',
 
   importOrder: [
-    '^.*\\.s?css$', // Match any import that ends with .css or .scss
+    '',
+    '<BUILT_IN_MODULES>',
     '',
     '^(react/(.*)$)|^(react$)|^(react-(.*)$)',
+    '',
     '<THIRD_PARTY_MODULES>',
     '',
     '^types$',
@@ -28,9 +30,12 @@ module.exports = {
     '^@/styles/(.*)$',
     '^@/app/(.*)$',
     '',
+    '^.*\\.s?css$', // Match any import that ends with .css or .scss
     '^[./]',
   ],
   importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
+  importOrderSeparation: true,
+  importOrderTypeScriptVersion: '>=5.0.0',
 
   tailwindConfig: './tailwind.config.js',
   tailwindFunctions: ['clsx', 'cva', 'tw'],
